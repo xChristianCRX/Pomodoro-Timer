@@ -24,6 +24,7 @@ export function cyclesReducer(state: CyclesState, action: any) {
                 activeCycleId: action.payload.newCycle.id
             } */
             return produce(state, draft => {
+                console.log(action)
                 draft.cycles.push(action.payload.newCycle);
                 draft.activeCycleId = action.payload.newCycle.id;
             })
